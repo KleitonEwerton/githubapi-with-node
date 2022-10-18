@@ -30,7 +30,6 @@ routes.get("/:organization/:repository", (req, res) => {
     .then((response) => {
       res.send(baseLayout([tableContributors(response.data["payload"]["contributors"]), tableBranches(response.data["payload"]["branchList"]),tableMerges(response.data["payload"]["mergeList"])]));
     })
-    .catch(() => res.send("404"));
+    .catch(() => res.send("<div style='display:flex; flex-direction:column; min-height:100vh; align-items:center;justify-content:center; background-color:#323232;color:red;'> 404 <br> or <br> time exceeded </div>"));
 });
-
 export default routes;

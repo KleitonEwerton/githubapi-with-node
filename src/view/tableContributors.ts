@@ -3,9 +3,9 @@ export default function tableContributors(props: Array<any>){
     
     return (
     "<div class='container'>"+
-        "<div style='max-height:500px; max-width:99wh;overflow: scroll;'>"+
+    "<h3>Contributors: " + props.length +"</h3>" +
+        "<div style='height:500px; max-width:99wh;overflow: scroll;'>"+
           "<table class='table'>"+
-          "Contributors: " + props.length+
             "<thead>" +
               "<tr>" +
                 "<th scope='col'>ID</th>"+
